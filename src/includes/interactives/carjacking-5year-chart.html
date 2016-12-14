@@ -1,0 +1,37 @@
+<div style="width:80%;max-width:600px;">
+	<div class="graphic_title">Carjackings 2011-2016</div>
+	<canvas id="carjacking5yearChart"></canvas>
+</div>
+
+
+<script>
+var carjacking5year = document.getElementById("carjacking5yearChart").getContext('2d');
+var myChart = new Chart(carjacking5year, {
+   type: 'bar',
+    data: {
+        labels: ["2011", "2012", "2013", "2014","2015", "2016"],
+        datasets: [{
+            label: 'Carjackings',
+            data: [194, 182, 124, 156, 283, 380],
+            backgroundColor: [
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#95a5a6'
+            ],
+            borderWidth: 0
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>

@@ -1,0 +1,36 @@
+<div style="width:80%;max-width:900px;">
+	<div class="graphic_title">Baltimore robberies 2015 / 2016</div>
+	<canvas id="totalRobberiesChart"></canvas>
+</div>
+
+
+<script>
+var totalRobberies = document.getElementById("totalRobberiesChart").getContext('2d');
+var myChart = new Chart(totalRobberies, {
+  type: 'bar',
+  data: {
+    labels: ["Carjacking", "Commercial", "Residential", "Street"],
+    datasets: [{
+      label: '2015',
+      data: [283, 874, 434, 3126],
+		backgroundColor: [
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e'
+            ],
+            borderWidth: 0
+    }, {
+      label: '2016',
+      data: [380, 754, 446, 3456],
+      backgroundColor: [
+                '#95a5a6',
+                '#95a5a6',
+                '#95a5a6',
+                '#95a5a6'
+            ],
+            borderWidth: 0
+    }]
+  }
+});
+</script>

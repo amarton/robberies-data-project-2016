@@ -1,0 +1,43 @@
+<div style="width:80%;max-width:600px;">
+	<div class="graphic_title">Carjackings by month 2016</div>
+	<canvas id="carjackingByMonthChart"></canvas>
+</div>
+
+
+<script>
+var carjackingByMonth = document.getElementById("carjackingByMonthChart").getContext('2d');
+var myChart = new Chart(carjackingByMonth, {
+   type: 'bar',
+    data: {
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+        datasets: [{
+            label: 'Carjackings',
+            data: [29, 23, 17, 49, 30, 28, 41, 29, 35, 39, 59, 1],
+            backgroundColor: [
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e'
+            ],
+            borderWidth: 0
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
