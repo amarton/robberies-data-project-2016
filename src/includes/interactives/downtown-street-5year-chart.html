@@ -1,0 +1,40 @@
+<div style="width:100%;max-width:600px;">
+	<div class="graphic_title">Downtown street robberies 2011-2016</div>
+	<canvas id="downtown5yearChart"></canvas>
+</div>
+
+
+<script>
+var downtown5year = document.getElementById("downtown5yearChart").getContext('2d');
+var myChart = new Chart(downtown5year, {
+   type: 'bar',
+    data: {
+        labels: ["2011", "2012", "2013", "2014","2015", "2016"],
+        datasets: [{
+            label: 'Downtown Street Robberies',
+            data: [139, 136, 133, 133, 138, 225],
+            backgroundColor: [
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#95a5a6'
+            ],
+            borderWidth: 0
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+
+
+

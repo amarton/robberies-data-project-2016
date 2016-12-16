@@ -106,12 +106,13 @@
         <div class="header__title">Examining Baltimore's 2016 rise in robberies</div>
         <div class="article__byline">Adam Marton</div>
         <div class="article__dateline">December 2016</div>
-        <p>Baltimore has seen a 7% rise in total robberies this year. Data from Open Baltimore shows that robberies have risen from 4,717 total robberies in 2015 up to 5,036 so far in 2016*. </p>
+        <p>Baltimore has seen a substantial rise in robberies in 2016.  Carjackings are up 38% across the city while Baltimore’s downtown neighborhood has seen a 63% jump in street robberies. And things only seem to be getting worse-- October was the worst month for carjackings in the city and November saw the highest number of street robberies.</p>
+        <p>While much of the city and local media have focused on high homicide numbers, Baltimore has seen a 7% rise in total robberies in 2016. Data from Open Baltimore shows that robberies have risen from 4,717 total robberies in 2015 up to 5,036 so far in 2016*. </p>
         <p>Baltimore police classify robberies in four categories: carjacking, commercial, residential and street robberies. Two of those categories-- carjackings and street robberies-- were up significantly in 2016. Carjackings rose 34% from 283 in 2015 to 380 in 2016. Street robberies saw a 11% jump with 3,126 total street robberies in 2015 up to 3,456 in 2016. <em>See map above to explore Baltimore carjackings and street robberies in 2016</em></p>
         <p>Residential and commercial saw declines or only slight increases, as further discussed below.</p>
         <p><em>*All data current as of 12/03/2016</em></p>
       </div>
-      <!--full-width interactive--><div style="width:80%;max-width:900px;">
+      <!--full-width interactive--><div style="width:100%;max-width:900px;">
 	<div class="graphic_title">Baltimore robberies 2015 / 2016</div>
 	<canvas id="totalRobberiesChart"></canvas>
 </div>
@@ -165,7 +166,7 @@ var myChart = new Chart(totalRobberies, {
 	<!-- End AdSlot 1 -->
 
 </div>
-        <p>Carjacking rates have fluctuated slightly over the years but are up significantly over time. With 380 carjackings so far in 2016, Baltimore has seen a 96% increase in carjackings over a five year period (there were 194 carjackings in 2011).</p><div style="width:80%;max-width:600px;">
+        <p>Carjacking rates have fluctuated slightly over the years but are up significantly over time. With 380 carjackings so far in 2016, Baltimore has seen a 96% increase in carjackings over a five year period (there were 194 carjackings in 2011).</p><div style="width:100%;max-width:600px;">
 	<div class="graphic_title">Carjackings 2011-2016</div>
 	<canvas id="carjacking5yearChart"></canvas>
 </div>
@@ -202,7 +203,7 @@ var myChart = new Chart(carjacking5year, {
     }
 });
 </script>
-        <p>Most carjackings in 2016 occurred with the use of a firearm (65%). November, with 59 incidents, saw more carjackings than any other month.</p><div style="width:80%;max-width:600px;">
+        <p>Most carjackings in 2016 occurred with the use of a firearm (65%). November, with 59 incidents, saw more carjackings than any other month.</p><div style="width:100%;max-width:600px;">
 	<div class="graphic_title">Carjackings by month 2016</div>
 	<canvas id="carjackingByMonthChart"></canvas>
 </div>
@@ -247,22 +248,364 @@ var myChart = new Chart(carjackingByMonth, {
 </script>
         <p>The Southern district was hit hard by carjackings in 2016, with a total of 20 incidents so far this year. This is the highest number of carjackings of any district and represents a 200% rise in carjackings in the Southern from 2015 (when 20 total incidents were recorded). </p>
         <p>Carjackings were up significantly in the Central district (77%), the Western district (68%) and the Southeastern district (64%) in 2016. It is worth noting that carjackings were flat in the Eastern district and down 46% year-over-year in the Northeastern district.</p>
-        <p>The data also breaks robberies down by neighborhood. The vast majority of neighborhoods saw carjacking numbers in the low single digits in 2016. However, the following neighborhoods all had more than 5 carjackings in 2016, including two neighborhoods (Gwynn Falls and Penrose) that had 10 carjackings each. </p><table width="300">
-	
-	<tr  style="background-color: #d3d3d3;padding:10;">
-		<td colspan="2" style="padding:10px;">Gwynn Falls</td>
-		<td>10</td>
-	</tr>
+        <p>The data also breaks robberies down by neighborhood. The vast majority of neighborhoods saw carjacking numbers in the low single digits in 2016. However, the following neighborhoods all had more than 6 carjackings in 2016.</p><style>/* info (hed, dek, source, credit) */
+.rg-container {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.4;
+	margin: 0;
+	padding: 1em 0.5em;
+	color: #1a1a1a;
+}
+.rg-header {
+	margin-bottom: 1em;
+}
+.rg-hed {
+	font-weight: bold;
+	font-size: 1.4em;
+}
+.rg-dek {
+	font-size: 1em;
+}
+.rg-source-and-credit {
+	width: 100%;
+	overflow: hidden;
+}
+.rg-source {
+	margin: 0;
+	float: left;
+	font-weight: bold;
+	font-size: 0.75em;
+}
+.rg-source .pre-colon {
+	text-transform: uppercase;
+}
 
-	<tr style="background-color: #c0c0c0">
-		<td colspan="2" style="padding:10px;">Penrose/Fayette Street</td>
-		<td>10</td>
-	</tr>
+/* table */
+table.rg-table {
+	width: 100%;
+	margin-bottom: 0.5em;
+	font-size: 1em;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+table.rg-table * {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-align: left;
+	color: #333;
+}
+table.rg-table thead {
+	border-bottom: 1px solid #ddd;
+}
+table.rg-table tr {
+	border-bottom: 1px solid #ddd;
+	color: #222;
+}
+table.rg-table tr.highlight {
+	background: #efefef;
+}
+table.rg-table.zebra tr:nth-child(even) {
+	background: #efefef;
+}
+table.rg-table th {
+	padding: 0.35em;
+	font-size: 0.9em;
+}
+table.rg-table td {
+	padding: 0.35em;
+	font-size: 0.9em;
+}
+table.rg-table .highlight td {
+	font-weight: bold;
+}
+table.rg-table th.number, td.number {
+	text-align: right;
+}
 
+/* media queries */
+@media screen and (max-width: 300px) {
+.rg-container {
+	max-width: 300px;
+	margin: 0 auto;
+}
+table.rg-table {
+	display: block;
+	width: 100%;
+}
+table.rg-table tr.hide-mobile, table.rg-table th.hide-mobile, table.rg-table td.hide-mobile {
+	display: none;
+}
+table.rg-table thead {
+	display: none;
+}
+table.rg-table tbody {
+	display: block;
+	width: 100%;
+}
+table.rg-table tr, table.rg-table th, table.rg-table td {
+	display: block;
+	padding: 0;
+}
+table.rg-table tr {
+	border-bottom: none;
+	margin: 0 0 1em 0;
+	padding: 0.5em 0;
+}
+table.rg-table tr.highlight {
+	background: none;
+}
+table.rg-table.zebra tr:nth-child(even) {
+	background: none;
+}
+table.rg-table.zebra td:nth-child(even) {
+	background: #efefef;
+}
+table.rg-table tr:nth-child(even) {
+	background: none;
+}
+table.rg-table td {
+	padding: 0.5em 0 0.25em 0;
+	border-bottom: 1px dotted #ccc;
+	text-align: right;
+}
+table.rg-table td[data-title]:before {
+	content: attr(data-title);
+	font-weight: bold;
+	display: inline-block;
+	content: attr(data-title);
+	float: left;
+	margin-right: 0.5em;
+	font-size: 0.95em;
+}
+table.rg-table td:last-child {
+	padding-right: 0;
+	border-bottom: 2px solid #ccc;
+}
+table.rg-table td:empty {
+	display: none;
+}
+table.rg-table .highlight td {
+	background: none;
+}
+}
+</style>
+	<div class="graphic_title">TOP CARJACKING NEIGHBORHOODS 2016</div>
+	<div class='rg-content'>
+		<table class='rg-table zebra'>
+		
+			<tbody>
+				
+				<tr class=''>
+					<td class='text ' data-title='Gwynn Falls'>Gywnn Falls*</td>
+					<td class=' ' data-title='10'>10</td>
+				</tr>
 
-</table>
+				<tr class=''>
+					<td class='text ' data-title='Gwynn Falls'>Penrose/Fayette St</td>
+					<td class=' ' data-title='10'>10</td>
+				</tr>
+			
+
+				<tr class=''>
+					<td class='text ' data-title='Gwynn Falls'>Hollins Market</td>
+					<td class=' ' data-title='10'>9</td>
+				</tr>
+			
+
+				<tr class=''>
+					<td class='text ' data-title='Gwynn Falls'>Brooklyn</td>
+					<td class=' ' data-title='10'>8</td>
+				</tr>
+			
+
+				<tr class=''>
+					<td class='text ' data-title='Gwynn Falls'>Bolton Hill</td>
+					<td class=' ' data-title='10'>8</td>
+				</tr>
+			
+
+				<tr class=''>
+					<td class='text ' data-title='Gwynn Falls'>Downtown</td>
+					<td class=' ' data-title='10'>8</td>
+				</tr>
+			
+
+				<tr class='hide-mobile'>
+					<td class='text ' data-title='Gwynn Falls'>Sandtown Winchester</td>
+					<td class=' ' data-title='10'>8</td>
+				</tr>
+			
+
+				<tr class='hide-mobile'>
+					<td class='text ' data-title='Gwynn Falls'>Coldspring*</td>
+					<td class=' ' data-title='10'>7</td>
+				</tr>
+			
+
+				<tr class='hide-mobile'>
+					<td class='text ' data-title='Gwynn Falls'>Woodmere</td>
+					<td class=' ' data-title='10'>7</td>
+				</tr>
+			
+
+				<tr class='hide-mobile'>
+					<td class='text ' data-title='Gwynn Falls'>Middle Branch</td>
+					<td class=' ' data-title='10'>7</td>
+				</tr>
+			
+
+				<tr class='hide-mobile'>
+					<td class='text ' data-title='Gwynn Falls'>Washington Village</td>
+					<td class=' ' data-title='10'>7</td>
+				</tr>
+			
+
+				<tr class='hide-mobile'>
+					<td class='text ' data-title='Gwynn Falls'>Penn North</td>
+					<td class=' ' data-title='10'>7</td>
+				</tr>
+			
+
+				<tr class='hide-mobile'>
+					<td class='text ' data-title='Gwynn Falls'>Harlem Park</td>
+					<td class=' ' data-title='10'>7</td>
+				</tr>
+			
+			
+			</tbody>
+		</table>
+	</div><br><br>
+
+        <p><em>* Gwynn Falls and Coldspring are both home to district police stations, which would account for the high number of reported incidents. Blocks housing district police stations appear often in the data, likely representing where an incident was reported as opposed to where is occurred.  </em></p>
+        <div class="graphic_title">NORTH AVE & MCCULLOH ST</div>
         <p>Mapping the carjacking incidents revealed several corridors that have experienced a rash of carjackings in 2016.</p>
-        <p>INSERT ANALYSIS OF PENN NORTH, HOLLINS ST, OTHERS</p>
+        <p>The map below shows a several block area skirting the neighborhoods of Penn North and Reservoir Hill.  The three-block area highlighted in the map has seen 7 carjackings in 2016. Though the crimes span from March to November, several of the incidents occurred just a few days apart, as seen in the table.</p><img class="map-image" src="dist/images/penn-north-carjackings-map.png">
+<div class='rg-container'>
+
+	<div class='rg-content'>
+		<table class='rg-table zebra'>
+	
+			<tbody>
+				
+				<tr class=''>
+					<td class=' ' data-title='3/31/16'>3/31/16</td>
+					<td class='text ' data-title='1100 W NORTH AVE'>1100 W NORTH AVE</td>
+				</tr>
+
+				<tr class=''>
+					<td class=' ' data-title='3/31/16'>7/17/16</td>
+					<td class='text ' data-title='1100 W NORTH AVE'>2300 MCCULLOH ST</td>
+				</tr>
+			
+
+				<tr class=''>
+					<td class=' ' data-title='3/31/16'>7/27/16</td>
+					<td class='text ' data-title='1100 W NORTH AVE'>2300 MCCULLOH ST</td>
+				</tr>
+			
+
+				<tr class=''>
+					<td class=' ' data-title='3/31/16'>8/20/16</td>
+					<td class='text ' data-title='1100 W NORTH AVE'>1000 W NORTH AVE</td>
+				</tr>
+			
+
+				<tr class=''>
+					<td class=' ' data-title='3/31/16'>8/28/16</td>
+					<td class='text ' data-title='1100 W NORTH AVE'>1200 W NORTH AVE</td>
+				</tr>
+			
+
+				<tr class=''>
+					<td class=' ' data-title='3/31/16'>9/7/16</td>
+					<td class='text ' data-title='1100 W NORTH AVE'>1200 W NORTH AVE</td>
+				</tr>
+			
+
+				<tr class=''>
+					<td class=' ' data-title='3/31/16'>11/22/16</td>
+					<td class='text ' data-title='1100 W NORTH AVE'>1000 W NORTH AVE</td>
+				</tr>
+			
+			</tbody>
+		</table>
+	</div>
+	
+</div>
+        <div class="graphic_title">HOLLINS MARKET</div>
+        <p>This map shows the area around Hollins Market in southwest Baltimore. The area highlighted in the map has seen 9 carjackings in 2016. Three of the incidents occurred in a two-week period in November. </p><img class="map-image" src="dist/images/hollins-market-carjackings-map.png"><div class='rg-container'>
+	
+	<div class='rg-content'>
+		<table class='rg-table zebra'>
+
+			<tbody>
+				
+				<tr class=''>
+					<td class=' ' data-title='4/6/16'>4/6/16</td>
+					<td class='text ' data-title='800 HOLLINS ST'>800 HOLLINS ST</td>
+				</tr>
+
+				<tr class=''>
+					<td class=' ' data-title='4/6/16'>6/6/16</td>
+					<td class='text ' data-title='800 HOLLINS ST'>800 HOLLINS ST</td>
+				</tr>
+			
+
+				<tr class=''>
+					<td class=' ' data-title='4/6/16'>7/11/16</td>
+					<td class='text ' data-title='800 HOLLINS ST'>1100 HOLLIN ST</td>
+				</tr>
+			
+
+				<tr class=''>
+					<td class=' ' data-title='4/6/16'>7/16/16</td>
+					<td class='text ' data-title='800 HOLLINS ST'>1300 HOLLINS ST</td>
+				</tr>
+			
+
+				<tr class=''>
+					<td class=' ' data-title='4/6/16'>9/7/16</td>
+					<td class='text ' data-title='800 HOLLINS ST'>1100 HOLLINS ST</td>
+				</tr>
+			
+
+				<tr class=''>
+					<td class=' ' data-title='4/6/16'>9/30/16</td>
+					<td class='text ' data-title='800 HOLLINS ST'>900 HOLLINS ST</td>
+				</tr>
+			
+
+				<tr class='hide-mobile'>
+					<td class=' ' data-title='4/6/16'>11/15/16</td>
+					<td class='text ' data-title='800 HOLLINS ST'>0 PARKIN ST</td>
+				</tr>
+			
+
+				<tr class='hide-mobile'>
+					<td class=' ' data-title='4/6/16'>11/24/16</td>
+					<td class='text ' data-title='800 HOLLINS ST'>0 S CARLTON ST</td>
+				</tr>
+			
+
+				<tr class='hide-mobile'>
+					<td class=' ' data-title='4/6/16'>11/28/16</td>
+					<td class='text ' data-title='800 HOLLINS ST'>100 CALLENDAR ST</td>
+				</tr>
+			
+			</tbody>
+		</table>
+	</div>
+	
+        <p>Several high profile carjackings have been in the news this year. In May, <a href="http://www.baltimoresun.com/news/maryland/crime/bs-md-ci-fender-bender-carjacking-20160504-story.html" target="_new">Baltimore police warned motorists</a> to beware of deliberate fender-benders after a string of armed carjackings in the city. Several suspects were eventually arrested in that case.</p>
+        <p>In October, a woman was carjacked in East Baltimore and the suspect drove off with her <a href="http://www.baltimoresun.com/news/maryland/crime/bs-md-ci-amber-alert-20161026-story.html" target="_new">11-month-old baby in the car.</a> The child was found more than two hours later on a sidewalk in Northeast Baltimore.</p>
+        <p>Also in October, detectives spotted an armed carjacking suspect in Cherry Hill but one of the officers accidentally <a href="http://www.baltimoresun.com/news/maryland/crime/bs-md-ci-officer-shot-20161012-story.html" target="_new">shot himself in the wrist</a> before an arrest could be made.</p>
       </div>
     </div>
     <div class="container container--article">
@@ -270,29 +613,194 @@ var myChart = new Chart(carjackingByMonth, {
         <div class="article__chapter-title">
           <div class="article__chapter-title__text">Street Robberies</div>
         </div>
-        <!--ad--><div class="ad ad--cube">
-
-	<!-- Beginning Async AdSlot 1 for Ad unit trb.baltimoresun/news  ### size: [[300,250]] -->
-	<!-- Adslot's refresh function: googletag.pubads().refresh([gptadslots[1]]) -->
-	<div id='div-gpt-ad-430294160021529928-1'>
-		<script type='text/javascript'>
-			googletag.cmd.push(function() { googletag.display('div-gpt-ad-430294160021529928-1'); });
-		</script>
-	</div>
-	<!-- End AdSlot 1 -->
-
+        <p>Street robberies have steadily risen over the past five years. With 3,456 street robberies so far in 2016, Baltimore has seen a 28% rise in these crimes since 2011 (when there were 2,490). Street robberies are generally defined as theft through use or threat of force in a public area. </p><div style="width:100%;max-width:600px;">
+	<div class="graphic_title">Street Robberies 2011-2016</div>
+	<canvas id="street5yearChart"></canvas>
 </div>
-        <p>Street robberies have steadily risen over the past five years. With 3,456 street robberies so far in 2016, Baltimore has seen a 28% rise in these crimes since 2011 (when there were 2,490).</p>
-        <p>INSERT STREET OVER 5 YEARS CHART</p>
+
+
+<script>
+var street5year = document.getElementById("street5yearChart").getContext('2d');
+var myChart = new Chart(street5year, {
+   type: 'bar',
+    data: {
+        labels: ["2011", "2012", "2013", "2014","2015", "2016"],
+        datasets: [{
+            label: 'Street Robberies',
+            data: [2490, 2712, 2868, 2660, 3126, 3456],
+            backgroundColor: [
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#95a5a6'
+            ],
+            borderWidth: 0
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
         <p>Of the total street robberies, 1,539 incidents reportedly involved a firearm and 391 a knife, while 1,526 other incidents were classified as “other” or left blank. </p>
-        <p>Street robberies have been steadily rising each month through 2016, hitting 289 in April and not dropping below that since. October saw a high 395 incidents and November (the highest month for carjackings) saw 377 incidents.</p>
-        <p>INSERT STREET BY MONTH CHART</p>
+        <p>Street robberies have been steadily rising each month through 2016, hitting 289 in April and not dropping below that since. October saw a high 395 incidents and November (the highest month for carjackings) saw 377 incidents.</p><div style="width:100%;max-width:600px;">
+	<div class="graphic_title">Street Robberies by month 2016</div>
+	<canvas id="streetByMonthChart"></canvas>
+</div>
+
+
+<script>
+var streetByMonth = document.getElementById("streetByMonthChart").getContext('2d');
+var myChart = new Chart(streetByMonth, {
+   type: 'bar',
+    data: {
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+        datasets: [{
+            label: 'Street Robberies',
+            data: [255, 207, 238, 289, 345, 287, 328, 365, 334, 395, 377, 36],
+            backgroundColor: [
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e'
+            ],
+            borderWidth: 0
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+
         <p>The Central and Southeastern districts recorded the highest number of street robberies in 2016, each exceeding 600 incidents. The Southern district saw the highest percentage jump at 35%. The Southwestern, Northwestern and Northern districts all saw modest decreases in street robberies this year. </p>
-        <p>Looking on the neighborhood level, there were seven neighborhoods that exceeded 50 street robberies each:</p>
-        <p>INSERT TOP NEIGHBORHOODS</p>
-        <p>Analysing the location data, there were several blocks where multiple incidents occurred. This includes 10 incidents at 0 North Howard St near the Royal Farms Arena and 9 incidents at 5600 Sefton Ave near City Neighbors Hamilton charter school in Northeast. (??)</p>
-        <p>Downtown contained the most street robberies by far-- 225 incidents, more than the entire Western District combined.</p>
-        <p>INSERT DOWNTOWN MAP AND ANALYSIS</p>
+        <p>Looking on the neighborhood level, there were seven neighborhoods that exceeded 50 street robberies each:</p>	<div class="graphic_title">TOP STREET ROBBERY NEIGHBORHOODS 2016</div>
+<div class='rg-container'>
+	<div class='rg-content'>
+		<table class='rg-table zebra'>
+		
+				
+				<tr class=''>
+					<td class='text ' data-title='Downtown'>Downtown</td>
+					<td class=' ' data-title='225'>225</td>
+				</tr>
+
+				<tr class=''>
+					<td class='text ' data-title='Downtown'>Frankford</td>
+					<td class=' ' data-title='225'>83</td>
+				</tr>
+			
+
+				<tr class=''>
+					<td class='text ' data-title='Downtown'>Belair-Edison</td>
+					<td class=' ' data-title='225'>70</td>
+				</tr>
+			
+
+				<tr class=''>
+					<td class='text ' data-title='Downtown'>Patterson Park Neighborhood</td>
+					<td class=' ' data-title='225'>69</td>
+				</tr>
+			
+
+				<tr class=''>
+					<td class='text ' data-title='Downtown'>Brooklyn</td>
+					<td class=' ' data-title='225'>60</td>
+				</tr>
+			
+
+				<tr class=''>
+					<td class='text ' data-title='Downtown'>Ednor Gardens-Lakeside</td>
+					<td class=' ' data-title='225'>57</td>
+				</tr>
+			
+
+				<tr class='hide-mobile'>
+					<td class='text ' data-title='Downtown'>Fells Point</td>
+					<td class=' ' data-title='225'>53</td>
+				</tr>
+			
+			</tbody>
+		</table>
+	</div>
+	
+        <p>Analyzing the location data, there were several blocks where multiple incidents occurred. This includes 10 incidents at 0 North Howard St near the Royal Farms Arena and 9 incidents at 5600 Sefton Ave near City Neighbors Hamilton charter school in Northeast. (??)</p>
+        <div class="graphic_title">EXAMINING STREET ROBBERIES IN DOWNTOWN</div>
+        <p>Baltimore’s Downtown neighborhood contained the most street robberies by far-- 225 incidents, more than the entire Western District combined. This represents a 63% jump in robberies in that neighborhood. In fact, the number of robberies in downtown held steady at  around 140 per year since 2011.</p><div style="width:100%;max-width:600px;">
+	<div class="graphic_title">Downtown street robberies 2011-2016</div>
+	<canvas id="downtown5yearChart"></canvas>
+</div>
+
+
+<script>
+var downtown5year = document.getElementById("downtown5yearChart").getContext('2d');
+var myChart = new Chart(downtown5year, {
+   type: 'bar',
+    data: {
+        labels: ["2011", "2012", "2013", "2014","2015", "2016"],
+        datasets: [{
+            label: 'Downtown Street Robberies',
+            data: [139, 136, 133, 133, 138, 225],
+            backgroundColor: [
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#95a5a6'
+            ],
+            borderWidth: 0
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+
+
+
+
+        <p>The map below highlights the locations (generally reported by 100 block) of all reported street robberies in the downtown neighborhood. Each square represents a location where a street robbery was reported. The lighter squares represent locations with multiple incidents. The number next to each square represents the number of incidents at that location. </p>
+        <div class="graphic_title">LOCATION OF DOWNTOWN STREET ROBBERIES</div><iframe width="100%" height="620" frameborder="0" src="https://baltsun.carto.com/builder/8b503b70-c2e1-11e6-8655-0e8c56e2ffdb/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+        <p>A few areas immediately jump out for having a high concentration of street robberies in downtown: the area surrounding the Royal Farms Arena, an eight block stretch of Baltimore Street and the corner of West Saratoga and Eutaw St.</p>
+        <p><b>Royal Farms Arena</b></p>
+        <p>The Royal Farms Arena (formerly the Baltimore Arena) is located at 201 W. Baltimore Street. It takes up an entire city block and is bordered by West Lombard Street, South Howard Street and Hopkins Place. Looking at that single block, there were <strong>21 reported street robberies</strong> in 2016. Fanning out a few more blocks would increase that number significantly. </p><img class="map-image" src="dist/images/downtown-arena-map.png">
+        <p><b>Baltimore Street</b></p>
+        <p>Another hotspot for downtown street robberies appears to be an eight block section of Baltimore Street running between 400 East Baltimore Street (Baltimore and Gay) to 400 West Baltimore Street (Baltimore and Eutaw). Nearly <strong>60 street robberies</strong> occurred on this section of Baltimore Street and many more if you expand one block north or south along the corridor.</p><img class="map-image" src="dist/images/downtown-baltimore-st-map.png">
+        <p><b>Satatoga and Eutaw</b></p>
+        <p>The corner of West Saratoga and North Eutaw seems to be another hot spot, with <strong>18 robberies</strong> occurring near that corner in 2016 (and many more if you fan out one block in either direction). </p><img class="map-image" src="dist/images/downtown-saratoga-st-map.png">
+        <p>Several high profile robberies have occurred in the downtown neighborhood in 2016. In February, <a href="http://www.baltimoresun.com/news/maryland/baltimore-city/bs-md-ci-downtown-robbery-20160216-story.html" target="_new">a father and son</a> were charged in a daylight robbery of a man near Power Plan Live. </p>
+        <p>In May, a man was shot while being <a href="http://www.baltimoresun.com/news/maryland/crime/bs-md-ci-shootings-20160515-story.html">robbed early Sunday morning</a> on Water Street. Another man had been shot on that block the previous month.</p>
+        <p>In August, police charged a man with attempted murder after he <a href="http://www.baltimoresun.com/news/maryland/crime/bs-md-ci-attempted-murder-arrest-20160812-story.html" target="_new">shot a man during a robbery</a> in the unit block of Custom House Ave. </p>
       </div>
     </div>
     <div class="container container--article">

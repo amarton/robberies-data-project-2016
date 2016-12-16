@@ -1,0 +1,43 @@
+<div style="width:100%;max-width:600px;">
+	<div class="graphic_title">Street Robberies by month 2016</div>
+	<canvas id="streetByMonthChart"></canvas>
+</div>
+
+
+<script>
+var streetByMonth = document.getElementById("streetByMonthChart").getContext('2d');
+var myChart = new Chart(streetByMonth, {
+   type: 'bar',
+    data: {
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+        datasets: [{
+            label: 'Street Robberies',
+            data: [255, 207, 238, 289, 345, 287, 328, 365, 334, 395, 377, 36],
+            backgroundColor: [
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e',
+                '#34495e'
+            ],
+            borderWidth: 0
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
