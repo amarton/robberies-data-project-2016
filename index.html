@@ -124,11 +124,7 @@
         <div class="header__title">Examining Baltimore's 2016 increase in robberies</div>
         <div class="article__byline">Adam Marton</div>
         <div class="article__dateline">December 20, 2016</div>
-        <!--.shareTools
-        .icon-facebook
-        .icon-twitter
-        
-        -->
+        <div class="shareTools"><a href="http://www.facebook.com/sharer.php?u=http://data.baltimoresun.com/news/robberies2016" target="_blank"><img class="facebook" src="dist/images/facebook.png"></a><a href="https://twitter.com/share?url=http://data.baltimoresun.com/news/robberies2016&amp;amp;text=Examining%20Baltimore's%202016%20Robberies" target="_blank"><img class="twitter" src="dist/images/twitter.png"></a></div>
         <p>Baltimore has seen a substantial increase in robberies this year. Carjackings are up 37 percent across the city and Baltimore’s downtown neighborhood has seen a 63 percent jump in street robberies. And things only seem to be getting worse-- November was the worst month for carjackings in the city and October saw the highest number of street robberies.</p>
         <p>While many have focused on the city’s high homicide numbers (which surpassed 300 for the second year in a row), robberies are up much more significantly year-over-year. <a href="https://data.baltimorecity.gov/Public-Safety/BPD-Part-1-Victim-Based-Crime-Data/wsfq-mvij">Data from Open Baltimore</a> shows that Baltimore has seen a 9 percent increase in total robberies, with 5,134 so far in 2016* up from 4,717 total robberies in 2015.</p>
         <p>Baltimore police classify robberies in four categories: carjacking, commercial, residential, and street robberies. Two of those categories-- carjackings and street robberies-- are up significantly. Carjackings rose 37 percent this year, from 283 in 2015 to 388 in 2016. Street robberies have seen a 13 percent jump in 2016, with 3,126 total street robberies in 2015 up to 3,520 in 2016. See map above to explore 2016 Baltimore robberies.</p>
@@ -883,7 +879,34 @@ var myChart = new Chart(downtown5year, {
 
 </div>
     <!--footer mixin-->
-    <!--+footer([{'role': 'That Role','name': 'This Person'},{'role': 'This Role', 'name': 'That Person'}])-->
+    <footer class="footer">
+      <section class="footer__credits">
+        <ul>
+          <li class="label"></li>
+          <li></li>
+        </ul>
+      </section>
+      <section class="footer__comments"><!-- Facebook Commenting -->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- /Facebook Commenting -->
+
+<div id="comments">
+	<h1> <span class="icon-comment"></span> Leave a comment </h1>
+  <!--replace data-href with page url to enable facebook comments-->
+  <div class="fb-comments" data-href="http://data.baltimoresun.com/news/robberies2016/" data-width="100%" data-numposts="10" data-colorscheme="light"></div>
+</div>
+      </section>
+      <section class="footer__logo"><img src="dist/images/baltimore-sun-logo-white.png" width="300"/></section>
+    </footer>
     <!-- Javascript-->
     <!--Load jQuery CDN, fall back to local version if necessary		-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

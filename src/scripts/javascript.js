@@ -2,7 +2,7 @@ var app = app || {
 
 	init: function(){
 
-		app.share();
+		//app.share();
 		app.show_video();
 
 	},
